@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/bash_extra
+DIR="$HOME/bash_extra"
 
 while read x;
 do 
@@ -8,9 +8,9 @@ do
   then
     continue
   else
-    source "$HOME/bash_extra/$x"
+    source "$DIR/$x"
   fi
 done << EOF
-  $(ls)
+  $(ls $DIR)
 EOF
 
